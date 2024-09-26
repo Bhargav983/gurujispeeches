@@ -1,25 +1,17 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import ReactAudioPlayer from 'react-audio-player';
+import audioFile from './abc.mp3';  // Import from the src folder
 
-function App() {
+const AudioPlayer = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <ReactAudioPlayer
+        src={audioFile}
+        autoPlay={false}
+        controls
+      />
     </div>
   );
-}
+};
 
-export default App;
+export default AudioPlayer;
